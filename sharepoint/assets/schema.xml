@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Basic List" Direction="LTR" EnableContentTypes="TRUE"
+  FolderCreation="FALSE" Url="Lists/MicrosoftSoftware"
+  BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x010090af9b2b-f1c4-4ed3-9908-d542db9ec57e" />
+    </ContentTypes>
+    <Fields>
+      <!-- <Field ID="{9ea8be7d-fd4d-46b1-8a74-451d6378cf5b}" Name="SoftwareName" Type="Text"
+        DisplayName="SoftwareName" Required="FALSE" />
+      <Field ID="{e37b3f60-6aad-4ea3-8945-be5fa94106b3}" Name="SoftwareVersion" Type="Text"
+        DisplayName="SoftwareVersion" Required="FALSE" />
+      <Field ID="{5aec0e1a-257d-4279-8a88-adc5fea6fb1d}" Name="SoftwareDescription" Type="Text"
+        DisplayName="SoftwareDescription" Required="FALSE" />
+      <Field ID="{d8be7c8f-64de-4157-87ce-9e87154d4727}" Name="SoftwareVendor" Type="Choice"
+        DisplayName="SoftwareVendor" Required="TRUE">
+        <CHOICES>
+          <CHOICE>Microsoft</CHOICE>
+          <CHOICE>Sun Microsystem</CHOICE>
+          <CHOICE>Adobe</CHOICE>
+          <CHOICE>Others</CHOICE>
+        </CHOICES>
+      </Field> -->
+    </Fields>
+    <Views>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main"
+        DisplayName="$Resources:Core,objective_schema_mwic" DefaultView="TRUE" MobileView="TRUE"
+        MobileDefaultView="TRUE" Url="Lists/MicrosoftSoftware/AllItems.aspx">
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Toolbar Type="Standard" />
+        <ViewFields>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="SoftwareName" />
+          <FieldRef Name="SoftwareVersion" />
+          <FieldRef Name="SoftwareDescription" />
+          <FieldRef Name="SoftwareVendor" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID" />
+          </OrderBy>
+        </Query>
+        <RowLimit Paged="TRUE">30</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

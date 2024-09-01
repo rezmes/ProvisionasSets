@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "provision-as-sets-client-side-solution",
+    "id": "c36445ac-bf2b-4eea-9eda-e73bd987877d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "features": [
+      {
+        "title": "Provisioning Assets",
+        "description": "Spartefacts provisioning features",
+        "id": "d59275ed-2fd6-4c8a-a0b9-cdbbc1f695ad",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": ["elements.xml"],
+          "elementFiles": ["schema.xml"]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/provision-assets.sppkg"
+  }
+}
